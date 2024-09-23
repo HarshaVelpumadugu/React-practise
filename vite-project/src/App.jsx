@@ -23,6 +23,32 @@ import ShoppingListForm from './ShoppingListForm.jsx';
 import ShoppingListItem2 from './ShoppingListItem2.jsx';
 import Counting from './Counting.jsx';
 import QuoteFetcher from './QuoteFetcher.jsx';
+import ComponentA from './ComponentA.jsx';
+import MyComponent from './MyComponent.jsx';
+
+//useContext()= React hook that allows you to share values between multiple levels of components with out passing props through each level
+
+//Provider Component
+//import {createContext} from 'react';
+//export const MyContext=createContext();
+//<MyContext.Provider value={value}>
+//    <child/>
+//</MyContext.Provider>
+
+//Consumer Component
+//import React,{useContext} from 'react';
+//import {MyContext} from './ComponentA';
+//const value=useContext(MyContext);
+
+//useState() = Re-renders the component when state value changes.
+
+//useRef() = 'use Reference' Does not cause re-renders when its value changes.
+//when you want a component to "remember" some info,but you don't want that info
+//to trigger new renders
+
+//Accessing/Interfacing with your DOM elements
+//Handling Focus,Animations,Transistions
+//Managing Timers and Intervals
 
 const data=[
   {id: 1,item:"milk",quantity: 1, Completed:true},
@@ -42,10 +68,11 @@ function lessThan4(dice){
 function allSameValue(dice) {
   return dice.every((v)=> v===dice[0]);
 }
-export default function App(){
+function App(){
   return (
     <div>
-      <QuoteFetcher/>
+      <MyComponent/>
     </div>
   );
 }
+export default App;
